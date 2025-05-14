@@ -52,9 +52,10 @@ export default function About() {
     },
   ];
   return (
-    <Row fillWidth>
+    <Row fillWidth mobileDirection="column">
       {about.tableOfContent.display && (
         <Column
+          hide="s"
           position="sticky"
           style={{
             top: "50%",
@@ -72,7 +73,7 @@ export default function About() {
           <TableOfContents structure={structure} about={about} />
         </Column>
       )}
-      <Column maxWidth="m" flex={1}>
+      <Column className={styles.main} maxWidth="m" flex={1}>
         <Schema
           as="webPage"
           baseURL={baseURL}
