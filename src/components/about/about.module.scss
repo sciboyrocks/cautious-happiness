@@ -14,7 +14,9 @@
 
 @media (--s) {
     .avatar {
-        top: auto;
+        position: static;
+        width: 100%;
+        margin-bottom: var(--static-space-24);
     }
 
     .textAlign {
@@ -23,5 +25,13 @@
 
     .blockAlign {
         align-self: center;
+        max-width: 100%;
+        width: 100%;
+    }
+
+    .main {
+        max-width: 100%;
+        width: 100%;
+        padding: 0 var(--static-space-8);
     }
 }
