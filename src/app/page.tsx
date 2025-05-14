@@ -8,6 +8,7 @@ import { home, about, person, newsletter } from "@/app/resources/content";
 import { Mailchimp } from "@/components";
 import { Posts } from "@/components/blog/Posts";
 import { Meta, Schema } from "@/once-ui/modules";
+import { getLatestProject } from "@/app/utils/utils";
 
 export async function generateMetadata() {
   return Meta.generate({
@@ -19,6 +20,15 @@ export async function generateMetadata() {
 }
 
 export default function Home() {
+  // Get the latest project
+  const latestProject = getLatestProject();
+  
+  // Construct the featured project badge content if we have a project
+  const featuredProject = latestProject ? {
+    title: <>Recent project: <strong className="ml-4">{latestProject.metadata.title}</strong></>,
+    href: `/work/${latestProject.slug}`,
+  } : null;
+  
   return (
     <Column maxWidth="m" gap="xl" horizontal="center">
       <Schema
@@ -36,11 +46,11 @@ export default function Home() {
       />
       <Column fillWidth paddingY="24" gap="m">
         <Column maxWidth="s">
-          {home.featured && (
+          {home.featured.display && featuredProject && (
           <RevealFx fillWidth horizontal="start" paddingTop="16" paddingBottom="32" paddingLeft="12">
             <Badge background="brand-alpha-weak" paddingX="12" paddingY="4" onBackground="neutral-strong" textVariant="label-default-s" arrow={false}
-              href={home.featured.href}>
-              <Row paddingY="2">{home.featured.title}</Row>
+              href={featuredProject.href}>
+              <Row paddingY="2">{featuredProject.title}</Row>
             </Badge>
           </RevealFx>
           )}
@@ -93,7 +103,7 @@ export default function Home() {
         </Flex>
       )}
       <Projects range={[2]} />
-      {newsletter.display && <Mailchimp newsletter={newsletter} />}
+
     </Column>
   );
 }

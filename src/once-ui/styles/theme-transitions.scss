@@ -1,0 +1,65 @@
+// Highly optimized theme transitions specifically for desktop performance
+
+// Remove all inheritance to avoid cascading performance issues
+* {
+  transition: none;
+}
+
+// Minimal transitions for html and body - only background color
+html, body {
+  transition: background-color 0.3s linear;
+  will-change: background-color;
+}
+
+// Only apply transitions to most important elements
+[data-theme] {
+  transition: background-color 0.3s linear, color 0.3s linear;
+  will-change: background-color, color;
+}
+
+// Apply optimized transitions only to visible elements
+.button,
+button,
+a,
+[role="button"],
+nav,
+header,
+footer,
+main > div,
+article,
+section > div {
+  transition: background-color 0.3s linear, color 0.3s linear;
+}
+
+// Remove transitions entirely for smaller elements to improve performance
+span,
+small,
+i,
+b,
+strong,
+em,
+code,
+pre {
+  transition: none !important;
+}
+
+// Use hardware acceleration for key containers
+body > div,
+main,
+header,
+footer,
+nav,
+section,
+article {
+  transform: translateZ(0);
+  backface-visibility: hidden;
+}
+
+// Desktop-specific optimizations - even shorter transitions
+@media (min-width: 1024px) {
+  [data-theme],
+  html,
+  body {
+    transition: background-color 0.25s linear, color 0.25s linear;
+  }
+}

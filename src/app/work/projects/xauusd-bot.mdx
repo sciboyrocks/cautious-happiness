@@ -1,0 +1,42 @@
+---
+title: "Building a Real-Time Trading Bot with Backtesting Engine"
+publishedAt: "2025-04-22"
+summary: "Development of a high-frequency trading bot capable of executing trades on live tick data and simulating real-time strategies using historical tick data."
+images:
+  - "/images/projects/xauusd-bot/image.png"
+team:
+  - name: "Samrudh Raikote"
+    role: "Lead Developer & Quant Enthusiast"
+    avatar: "/images/avatar.jpg"
+    linkedIn: "https://www.linkedin.com/in/samrudhraikote"
+showViewProject: false
+---
+
+## Overview
+
+A high-frequency trading bot designed to execute and test strategies on real-time tick data, with an integrated backtesting engine to simulate market behavior using historical tick-level data.
+
+## Key Features
+
+- **Live Tick Data Integration**: Real-time market data ingestion with millisecond precision to enable lightning-fast trading decisions.
+- **Strategy Module**: Plug-and-play strategy support with customizable logic for scalping, momentum, or arbitrage-based models.
+- **Backtesting Engine**: Historical tick data simulation environment that mimics real-world execution delays, slippage, and order fills.
+- **Risk Management**: Integrated stop-loss, take-profit, and position-sizing features to protect capital across volatile markets.
+- **Performance Dashboard**: Real-time visualization of strategy metrics, equity curve, win rate, and drawdowns.
+
+## Technologies Used
+
+- **Python**: For core logic, strategy scripting, and backtesting.
+- **Pandas & NumPy**: For tick data manipulation and statistical calculations.
+- **Websockets**: To stream real-time tick data from market APIs.
+- **Plotly / Dash**: For interactive performance dashboards.
+- **Docker**: To containerize and deploy in isolated environments.
+
+## Challenges and Learnings
+
+Key challenges included handling the sheer volume of tick data without performance degradation and simulating real-world latency in a backtesting environment. Building a scalable, modular strategy engine required thoughtful abstraction. Optimizing I/O and memory usage was critical when backtesting large tick datasets.
+
+## Outcome
+
+The trading bot is now capable of both live trading and historical simulation. It provides a robust playground for testing high-frequency strategies and refining real-world deployment logic. This project is a stepping stone toward creating an institutional-grade algo trading framework.
+

@@ -36,13 +36,12 @@ const TableOfContents: React.FC<TableOfContentsProps> = ({ structure, about }) =
 
   return (
     <Column
-      left="0"
+      position="sticky"
+      top="80"
       style={{
-        top: "50%",
-        transform: "translateY(-50%)",
         whiteSpace: "nowrap",
       }}
-      position="fixed"
+      left="0"
       paddingLeft="24"
       gap="32"
       hide="m"

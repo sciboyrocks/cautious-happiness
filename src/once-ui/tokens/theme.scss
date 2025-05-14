@@ -1,4 +1,8 @@
 :root {
+    /* Ultra-optimized transition for better desktop performance */
+    transition: background-color 0.25s linear;
+    /* No will-change here to avoid unnecessary resource allocation */
+    
     /* FONT FAMILY */
     --font-family-body:     var(--font-primary);
     --font-family-heading:  var(--font-secondary);
@@ -26,6 +30,12 @@
     --backdrop-filter:       none;
     --surface-border:        var(--static-transparent);
     --surface-background:    var(--neutral-background-medium);
+}
+
+[data-theme="dark"], [data-theme="light"] {
+    /* Heavily optimized transitions for desktop performance */
+    transition: background-color 0.25s linear, color 0.25s linear;
+    /* Remove will-change to prevent unnecessary resource allocation */
 }
 
 [data-theme="dark"] {

@@ -17,6 +17,7 @@ type TimeDisplayProps = {
 
 const TimeDisplay: React.FC<TimeDisplayProps> = ({ timeZone, locale = "en-GB" }) => {
   const [currentTime, setCurrentTime] = useState("");
+  const [zoneName, setZoneName] = useState("");
 
   useEffect(() => {
     const updateTime = () => {
@@ -30,6 +31,7 @@ const TimeDisplay: React.FC<TimeDisplayProps> = ({ timeZone, locale = "en-GB" })
       };
       const timeString = new Intl.DateTimeFormat(locale, options).format(now);
       setCurrentTime(timeString);
+      setZoneName(timeZone);
     };
 
     updateTime();
@@ -38,7 +40,12 @@ const TimeDisplay: React.FC<TimeDisplayProps> = ({ timeZone, locale = "en-GB" })
     return () => clearInterval(intervalId);
   }, [timeZone, locale]);
 
-  return <>{currentTime}</>;
+  return (
+    <Flex direction="column" align="center">
+      <div style={{ textAlign: 'center' }}>{currentTime}</div>
+      <div style={{ fontSize: '0.8em', opacity: 0.7, textAlign: 'center' }}>{zoneName}</div>
+    </Flex>
+  );
 };
 
 export default TimeDisplay;

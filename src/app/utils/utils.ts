@@ -18,6 +18,7 @@ type Metadata = {
   tag?: string;
   team: Team[];
   link?: string;
+  showViewProject?: boolean;
 };
 
 import { notFound } from 'next/navigation';
@@ -69,4 +70,18 @@ function getMDXData(dir: string) {
 export function getPosts(customPath = ["", "", "", ""]) {
   const postsDir = path.join(process.cwd(), ...customPath);
   return getMDXData(postsDir);
+}
+
+// New function to get the most recent project
+export function getLatestProject() {
+  const projects = getPosts(["src", "app", "work", "projects"]);
+  
+  if (!projects || projects.length === 0) {
+    return null;
+  }
+  
+  // Sort projects by publishedAt date (newest first)
+  return projects.sort((a, b) => {
+    return new Date(b.metadata.publishedAt).getTime() - new Date(a.metadata.publishedAt).getTime();
+  })[0]; // Return the first (most recent) project
 }
