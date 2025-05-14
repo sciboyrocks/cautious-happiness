@@ -38,17 +38,17 @@ export default function About() {
     {
       title: about.work.title,
       display: about.work.display,
-      items: about.work.experiences.map((experience) => experience.company),
+      items: about.work.experiences.map((experience) => String(experience.company)),
     },
     {
       title: about.studies.title,
       display: about.studies.display,
-      items: about.studies.institutions.map((institution) => institution.name),
+      items: about.studies.institutions.map((institution) => String(institution.name)),
     },
     {
       title: about.technical.title,
       display: about.technical.display,
-      items: about.technical.skills.map((skill) => skill.title),
+      items: about.technical.skills.map((skill) => String(skill.title)),
     },
   ];
   return (
@@ -262,8 +262,8 @@ export default function About() {
                 </Heading>
                 <Column fillWidth gap="l" marginBottom="40">
                   {about.studies.institutions.map((institution, index) => (
-                    <Column key={`${institution.name}-${index}`} fillWidth gap="4">
-                      <Text id={institution.name} variant="heading-strong-l">
+                    <Column key={`${String(institution.name)}-${index}`} fillWidth gap="4">
+                      <Text id={typeof institution.name === 'string' ? institution.name : undefined} variant="heading-strong-l">
                         {institution.name}
                       </Text>
                       <Text variant="heading-default-xs" onBackground="neutral-weak">

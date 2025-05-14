@@ -67,6 +67,8 @@ export default async function RootLayout({ children }: RootLayoutProps) {
             `,
           }}
         />
+        {/* Custom tab favicon */}
+        <link rel="icon" href="/trademark/icon-dark.svg" type="image/svg+xml" />
       </head>
       <ThemeProvider>
         <ToastProvider>

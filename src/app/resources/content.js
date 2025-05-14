@@ -16,7 +16,7 @@ const person = {
 
 const newsletter = {
   display: false,
-  title: <>Subscribe to {person.firstName}'s Newsletter</>,
+  title: <>Subscribe to {person.firstName}&apos;s Newsletter</>,
   description: (
     <>
       I write about AI applications, systems architecture, and how engineering can solve real problems.
@@ -62,7 +62,7 @@ const home = {
   },
   subline: (
     <>
-      I'm Samrudh, an AI/ML engineering student building intelligent tools—from trading bots and 
+      I&apos;m Samrudh, an AI/ML engineering student building intelligent tools—from trading bots and 
       automation platforms to full-stack products that work in the real world.
     </>
   ),
@@ -89,7 +89,7 @@ const about = {
     title: "Introduction",
     description: (
       <>
-        I'm an engineering student based in Bangalore, focused on AI, systems, and automation. I like building real, functional tools—from relationship apps to trading bots. I'm hands-on across the stack and obsessed with turning bold ideas into scalable systems that actually work.
+        I&apos;m an engineering student based in Bangalore, focused on AI, systems, and automation. I like building real, functional tools—from relationship apps to trading bots. I&apos;m hands-on across the stack and obsessed with turning bold ideas into scalable systems that actually work.
       </>
     ),
   },
@@ -225,7 +225,19 @@ const gallery = {
   label: "Gallery",
   title: `Photo gallery – ${person.name}`,
   description: `Snapshots from the personal and professional journey`,
-  images: [],
+  images: [
+    {
+      src: "/images/gallery/photo1.jpg",
+      alt: "Photo 1",
+      orientation: "horizontal",
+    },
+    {
+      src: "/images/gallery/photo2.jpg",
+      alt: "Photo 2",
+      orientation: "vertical",
+    },
+    // Add more images as needed
+  ],
 };
 
 export { person, social, newsletter, home, about, blog, work, gallery };
