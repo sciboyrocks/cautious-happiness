@@ -3,7 +3,7 @@ User-agent: *
 Allow: /
 
 # Host
-Host: https://www.samrudhraikote.me
+Host: https://samrudhraikote.me
 
 # Sitemaps
-Sitemap: https://www.samrudhraikote.me/sitemap.xml
+Sitemap: https://samrudhraikote.me/sitemap.xml
