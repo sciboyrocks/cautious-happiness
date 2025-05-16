@@ -69,6 +69,12 @@ export default async function RootLayout({ children }: RootLayoutProps) {
         />
         {/* Custom tab favicon */}
         <link rel="icon" href="/trademark/icon-dark.svg" type="image/svg+xml" />
+        
+        {/* Add these meta tags */}
+        <meta charSet="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <link rel="canonical" href="https://www.samrudhraikote.me/" />
+        <meta name="robots" content="index, follow" />
       </head>
       <ThemeProvider>
         <ToastProvider>
