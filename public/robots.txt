@@ -1,0 +1,9 @@
+# *
+User-agent: *
+Allow: /
+
+# Host
+Host: https://www.samrudhraikote.me
+
+# Sitemaps
+Sitemap: https://www.samrudhraikote.me/sitemap.xml
