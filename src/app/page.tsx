@@ -10,14 +10,24 @@ import { Posts } from "@/components/blog/Posts";
 import { Meta, Schema } from "@/once-ui/modules";
 import { getLatestProject } from "@/app/utils/utils";
 
-export async function generateMetadata() {
-  return Meta.generate({
-    title: home.title,
-    description: home.description,
-    baseURL: baseURL,
-    path: home.path,
-  });
-}
+export const metadata = {
+  title: "Samrudh Raikote – Developer Portfolio",
+  description: "Portfolio of Samrudh Raikote showcasing Python, automation, and AI/ML projects.",
+  openGraph: {
+    title: "Samrudh Raikote – Developer Portfolio",
+    description: "Explore the work, projects, and technical journey of Samrudh Raikote.",
+    url: "https://samrudhraikote.me",
+    type: "website",
+    images: [
+      {
+        url: "https://samrudhraikote.me/trademark/icon-dark.svg",
+        width: 1200,
+        height: 630,
+        alt: "Samrudh Raikote's Portfolio",
+      },
+    ],
+  },
+};
 
 export default function Home() {
   // Get the latest project
