@@ -102,15 +102,16 @@ const about = {
         timeframe: "",
         role: "Developer & Designer",
         achievements: [
-          <><strong>Serenade</strong>&nbsp;– An AI-powered relationship platform for couples, includes:
-              <ul style={{ marginTop: '8px', paddingLeft: '24px' }}>
-                <li>Mood synchronization and emotional well-being tools</li>
-                <li>Personalized gift recommendations based on preferences</li>
-                <li>Data-driven insights to improve relationship dynamics</li>
-                <li>Currently in development with multiple planned features</li>
-                <li><strong>Tech Stack:</strong> React, Tailwind CSS, Appwrite for Database, Python (AI/ML), Node.js</li>
-              </ul>
-          </>,
+          <><strong>Stock Investor Platform</strong>&nbsp;– A comprehensive real-time trading and analysis platform, includes:
+          <ul style={{ marginTop: '8px', paddingLeft: '24px' }}>
+            <li>Real-time R-factor analysis comparing live intraday volume against 30-day historical averages</li>
+            <li>Direct integration with Angel Broking's SmartAPI for automated order execution</li>
+            <li>Live market data streaming with WebSocket for instant price and volume updates</li>
+            <li>Sector-wise stock performance analysis with interactive Chart.js visualizations</li>
+            <li>Complete portfolio management with P&L tracking and margin calculations</li>
+            <li><strong>Tech Stack:</strong> Flask, SmartAPI, WebSocket, pandas/numpy, Chart.js, MongoDB, yfinance</li>
+          </ul>
+      </>,
         ],
         images: [],
       },

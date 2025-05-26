@@ -1,0 +1,54 @@
+---
+title: "Stock Investor Platform"
+publishedAt: "2025-01-25"
+summary: "A comprehensive real-time stock trading and analysis platform integrating live market data, automated trading capabilities, and sophisticated portfolio management tools."
+images:
+  - "/images/projects/stock-investor-platform/login.png"
+  - "/images/projects/stock-investor-platform/navbar.png"
+  - "/images/projects/stock-investor-platform/dashboard.png"
+  - "/images/projects/stock-investor-platform/rfactors.png"
+  - "/images/projects/stock-investor-platform/positions.png"
+  - "/images/projects/stock-investor-platform/sector-scope.png"
+team:
+  - name: "Samrudh"
+    role: "Full-Stack Developer"
+    avatar: "/images/avatar.jpg"
+    linkedIn: "https://www.linkedin.com/in/samrudh-raikote-039749319"
+showViewProject: false
+---
+
+## Overview
+
+**Stock Investor Platform** is a sophisticated web-based trading application that combines real-time market analysis, automated trading execution, and comprehensive portfolio management. Built with Flask and integrated with Angel Broking's SmartAPI, it provides traders with live market data, intelligent stock recommendations, and seamless order execution capabilities. The platform features advanced analysis algorithms including real-time R-factor calculations and sector-wise performance tracking.
+
+## Features
+
+- **Real-Time Trading**: Direct integration with Angel Broking's SmartAPI for live order placement and execution
+- **Live Market Analysis**: Real-time stock data updates with volume analysis and price movement tracking
+- **Advanced R-Factor Analysis**: Real-time volume ratio calculation comparing current day's intraday volume (from market open to current time) against the same time period average over the past 30 trading days
+- **Sector Intelligence**: Comprehensive sector-wise stock performance analysis and visualization
+- **Portfolio Management**: Complete position tracking with P&L calculations and margin requirements
+- **WebSocket Integration**: Live market data streaming for instant price updates and volume calculations
+- **Risk Management**: Automated margin calculation and position sizing recommendations
+- **Interactive Charts**: Dynamic visualizations using Chart.js for trend analysis and volume patterns
+- **Multi-Dashboard Interface**: Specialized dashboards for different trading strategies and intraday analysis
+
+## Technologies Used
+
+- **Flask**: Python web framework for backend API development
+- **SmartAPI**: Angel Broking's trading API for market data and order execution
+- **WebSocket**: Real-time data streaming for live volume and price updates
+- **pandas & numpy**: Advanced data processing and time-series volume calculations
+- **yfinance**: Historical market data integration for 30-day volume baselines
+- **Chart.js**: Interactive financial charts and volume pattern visualization
+- **MongoDB/JSON**: Data storage for historical volume data and user configurations
+- **Flask-WTF**: CSRF protection and form handling
+- **Talisman**: Security headers and protection middleware
+
+## Challenges and Learnings
+
+The primary challenge was implementing real-time R-factor calculations that required maintaining 30-day historical volume data while processing live intraday volume feeds. Synchronizing multiple time-series data sources and ensuring accurate time-based volume averaging across different market sessions was complex. The real-time nature of the R-factor metric demanded efficient data structures and optimized algorithms to handle continuous calculations without performance degradation. This project deepened my understanding of financial time-series analysis, real-time data processing architectures, and the intricacies of volume-based trading indicators.
+
+## Outcome
+
+The Stock Investor Platform successfully demonstrates advanced financial engineering combined with real-time system architecture. The R-factor implementation provides traders with a unique edge by identifying unusual volume patterns as they develop throughout the trading day. The platform showcases expertise in quantitative finance, real-time data processing, and building production-ready trading systems. The modular design allows for easy integration of additional technical indicators and trading algorithms.
