@@ -105,7 +105,7 @@ const about = {
           <><strong>Stock Investor Platform</strong>&nbsp;– A comprehensive real-time trading and analysis platform, includes:
           <ul style={{ marginTop: '8px', paddingLeft: '24px' }}>
             <li>Real-time R-factor analysis comparing live intraday volume against 30-day historical averages</li>
-            <li>Direct integration with Angel Broking's SmartAPI for automated order execution</li>
+            <li>Direct integration with AngelOne Broking&apos;s SmartAPI for automated order execution</li>
             <li>Live market data streaming with WebSocket for instant price and volume updates</li>
             <li>Sector-wise stock performance analysis with interactive Chart.js visualizations</li>
             <li>Complete portfolio management with P&L tracking and margin calculations</li>

@@ -6,6 +6,7 @@ import classNames from "classnames";
 import styles from "./Logo.module.scss";
 import { SpacingToken } from "../types";
 import { Flex } from ".";
+import Image from "next/image";
 
 const sizeMap: Record<string, SpacingToken> = {
   xs: "20",
@@ -57,13 +58,14 @@ const Logo: React.FC<LogoProps> = ({
       )}
       {iconSrc && (
         // @ts-ignore
-        <img
+        <Image
+          src={iconSrc}
+          alt="Trademark"
+          height={parseInt(sizeMap[size])} 
+          width={undefined} 
           style={{
-            height: `var(--static-space-${sizeMap[size]})`,
             width: "auto",
           }}
-          alt="Trademark"
-          src={iconSrc}
         />
       )}
       {wordmark && !wordmarkSrc && (
@@ -76,13 +78,15 @@ const Logo: React.FC<LogoProps> = ({
       )}
       {wordmarkSrc && (
         // @ts-ignore
-        <img
+        <Image
+          src={wordmarkSrc}
+          alt="Trademark"
+          height={parseFloat(sizeMap[size]) * 16}
+          width={undefined}
           style={{
             height: `var(--static-space-${sizeMap[size]})`,
             width: "auto",
           }}
-          alt="Trademark"
-          src={wordmarkSrc}
         />
       )}
     </>
