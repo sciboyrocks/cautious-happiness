@@ -98,24 +98,6 @@ const about = {
     title: "Work Experience",
     experiences: [
       {
-        company: "Currently Developing",
-        timeframe: "",
-        role: "Developer & Designer",
-        achievements: [
-          <><strong>Stock Investor Platform</strong>&nbsp;– A comprehensive real-time trading and analysis platform, includes:
-          <ul style={{ marginTop: '8px', paddingLeft: '24px' }}>
-            <li>Real-time R-factor analysis comparing live intraday volume against 30-day historical averages</li>
-            <li>Direct integration with AngelOne Broking&apos;s SmartAPI for automated order execution</li>
-            <li>Live market data streaming with WebSocket for instant price and volume updates</li>
-            <li>Sector-wise stock performance analysis with interactive Chart.js visualizations</li>
-            <li>Complete portfolio management with P&L tracking and margin calculations</li>
-            <li><strong>Tech Stack:</strong> Flask, SmartAPI, WebSocket, pandas/numpy, Chart.js, MongoDB, yfinance</li>
-          </ul>
-      </>,
-        ],
-        images: [],
-      },
-      {
         company: "Past Projects",
         timeframe: "",
         role: "Developer & Designer",
@@ -147,7 +129,16 @@ const about = {
             <li><strong>Tech Stack:</strong> Python, Flask, Pushbullet API, Yahoo Finance API</li>
           </ul>
         </>,
-        
+        <><strong>Stock Investor Platform</strong>&nbsp;– A comprehensive real-time trading and analysis platform, includes:
+          <ul style={{ marginTop: '8px', paddingLeft: '24px' }}>
+            <li>Real-time R-factor analysis comparing live intraday volume against 30-day historical averages</li>
+            <li>Direct integration with AngelOne Broking&apos;s SmartAPI for automated order execution</li>
+            <li>Live market data streaming with WebSocket for instant price and volume updates</li>
+            <li>Sector-wise stock performance analysis with interactive Chart.js visualizations</li>
+            <li>Complete portfolio management with P&L tracking and margin calculations</li>
+            <li><strong>Tech Stack:</strong> Flask, SmartAPI, WebSocket, pandas/numpy, Chart.js, MongoDB, yfinance</li>
+          </ul>
+      </>,
         
         ],
         images: [],
