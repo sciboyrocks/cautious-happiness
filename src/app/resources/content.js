@@ -89,7 +89,7 @@ const about = {
     title: "Introduction",
     description: (
       <>
-        I&apos;m an engineering student based in Bangalore, focused on AI, systems, and automation. I like building real, functional tools—from relationship apps to trading bots. I&apos;m hands-on across the stack and obsessed with turning bold ideas into scalable systems that actually work.
+        I&apos;m an engineering student based in Bangalore, focused on AI, systems, and automation. I like building real, functional tools—from stock alert systems to trading bots. I&apos;m hands-on across the stack and obsessed with turning bold ideas into scalable systems that actually work.
       </>
     ),
   },
